@@ -10,6 +10,8 @@ Perl tools depende on the Menafmod.pm which is incuded, if you place bion_tools 
 
 **check_missing_fasta.py:** check the proportion of missing data (gaps, N, X, anything that is not actgACTG) for each sequence in a fasta file
 
+**purge_fasta.py:** extract or delete seqiences from a multi fasta file
+
 **transpose:** transpose matrix, needs to arguments, infile and separator
 
 **convert_ali:** convert alignments in different formats (FASTA NEXUS PHYSEQ)
