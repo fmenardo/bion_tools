@@ -14,7 +14,7 @@ Perl tools depende on the Menafmod.pm which is incuded, if you place bion_tools 
 
 **transpose:** transpose matrix, needs to arguments, infile and separator
 
-**convert_ali:** convert alignments in different formats (FASTA NEXUS PHYSEQ)
+**convert_ali:** convert alignments between different formats (FASTA NEXUS PHYLIP)
 
 **freq_count:** tally occurrences of lines in a file
 
