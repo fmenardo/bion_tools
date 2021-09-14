@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 
-use lib '~/biontools/';
+use lib $ENV{"HOME"}.'/bion_tools';
 use menafmod;
 
 $infile = $ARGV[0]; # flat_file_

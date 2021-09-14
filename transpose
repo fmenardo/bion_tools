@@ -1,8 +1,7 @@
 #!/usr/bin/perl
 
 
-use lib '~/bion_tools/';
-
+use lib $ENV{"HOME"}.'/bion_tools';
 
 use menafmod;
 
@@ -12,3 +11,4 @@ $del = $ARGV[1];   #delimitator
                   (@transponed) = &transpose_file($infile);
 
 print join ("\n",@transponed);
+
