@@ -1,0 +1,45 @@
+#!/usr/bin/perl
+
+
+use lib '~/biontools/';
+use menafmod;
+
+$infile = $ARGV[0]; # flat_file_
+$infor = $ARGV[1];   #input format FAS NEX CLS PHY
+$outfor = $ARGV[2];    #output format FAS NEX PHY PHYSEQ
+
+if (@ARGV<3) { print "argv.1= flat_file\nargv.2=input_format\nargv.3=outputformat\n supported format are FAS (CLS only input) NEX PHY\n"}
+if ($infor eq "FAS"){
+   @array = &fasta_to_array($infile);
+   }
+if ($infor eq "NEX") {
+   @array = &nexus_to_array($infile);
+   }
+
+if ($infor eq "CLS") {
+   @array = &clustal_to_array($infile);
+   }
+
+if ($infor eq "PHY") {
+   @array = &phylip_to_array($infile);
+   }
+
+#print join ("\n",@array);
+
+if ($outfor eq "NEX") {
+   @array_print = &array_to_nexus(@array);
+   }
+if ($outfor eq "FAS") {
+   @array_print = &array_to_fasta(@array);
+   }
+if ($outfor eq "PHY") {
+   @array_print = &array_to_phylip(@array);
+   }
+if ($outfor eq "PHYSEQ") {
+   @array_print = &array_to_phylip_seq(@array);
+   }
+
+
+print join ("",@array_print);
+
+

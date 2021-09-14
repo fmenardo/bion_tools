@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+
+use lib '~/bion_tools/';
+
+
+use menafmod;
+
+$infile = $ARGV[0]; # file
+$del = $ARGV[1];   #delimitator
+
+                  (@transponed) = &transpose_file($infile);
+
+print join ("\n",@transponed);
