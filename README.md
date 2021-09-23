@@ -5,6 +5,18 @@ Python tools depend on BioPhyton, and should compatible with both python 2 and 3
 
 Perl tools depend on the module menafmod.pm which is included, if you place bion_tools into your home they should work straight away, otherwise you have to modify the path at the beginning of each script.
 
+**base_env.yml** file to creat virtual environment where all tools should work, useful also to generate custom kernels for jupyter notebooks.
+Short instruvctions:
+
+create a .condarc file in your home and edit to determine the default location of conda environments and pkgs eg.
+
+>envs_dirs:
+>  - /data/fmenar/conda/envs
+>pkgs_dirs:
+>  - /data/fmenar/conda/pkgs
+
+
+
 **assemble.py:** cut, complement and/or reverse sequence from a fasta, works on files with a single sequence, if there are multiple sequences will consider only the first
 
 **check_length_fasta.py:** check the length of every sequence in a fasta file
