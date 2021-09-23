@@ -16,7 +16,7 @@ if you never used anaconda create a .condarc file in your home and edit to deter
     pkgs_dirs:
       - /data/fmenar/conda/pkgs
 
-Than:
+Than run:
 
     conda env create -f base_env.yml
     source activate base_env
