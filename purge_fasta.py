@@ -30,14 +30,14 @@ for record in SeqIO.parse(arguments.INFILE, "fasta"):
 
 	if arguments.keep:
 		if (flag==1):
-			print ">" +str(record.id)
-			print str(record.seq)
+			print (">" +str(record.id))
+			print (str(record.seq))
 
 	else:
 		if (flag ==0):
 	
-			print ">" +str(record.id)
-			print str(record.seq)
+			print (">" +str(record.id))
+			print (str(record.seq))
 
 
 
