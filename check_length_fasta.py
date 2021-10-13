@@ -31,13 +31,13 @@ for record in SeqIO.parse(arguments.INFILE, "fasta"):
 				flag=1
 
 	else:
-		print length
+		print (length)
 	old_length=length
 
 if (flag==1):
 	print "The sequences have different lengths"
 else:
-	print length	
+	print (length)	
 	
 
 

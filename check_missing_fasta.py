@@ -28,7 +28,7 @@ for record in SeqIO.parse(arguments.INFILE, "fasta"):
 	length = len(str(record.seq))
 	good_seq_length=len(re.findall('[ATCGatcg]', str(record.seq)))
 	ratio= float(good_seq_length)/float(length)
-	print str(record.id) + " " +str(ratio)
+	print (str(record.id) + " " +str(ratio))
 
 
 
