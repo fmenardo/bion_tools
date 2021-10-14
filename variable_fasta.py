@@ -76,7 +76,7 @@ parser.add_argument('-m','--missing', metavar='0-1', default='1', help='minimum 
 parser.add_argument('-ma','--missing_absolute', metavar='0 -  n_seq', default='0', help='max number of sequences with missing data, -m and -ma can coexist', type =int,nargs='?')
 parser.add_argument('-o','--outgroup', metavar='OUT', default="very_unlikely_name",help='name of outgroup sequence not to count in the missing data but to output ',type =str, nargs='?')
 parser.add_argument('-c','--count', default=False,help='count the numbero of variable / not variable / with more missing than accepted',action='store_true')
-
+parser.add_argument('-p','--pos', default=False,help='report genomic position of variable sites' ,action='store_true')
 
 
 
@@ -151,8 +151,8 @@ if arguments.count:
 
 
 for name_out, seq_out in OUT.items():
-		print ">" + name_out
-		print seq_out
+		print (">" + name_out)
+		print (seq_out)
 	
 
 
